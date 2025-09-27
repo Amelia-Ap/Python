@@ -6,5 +6,4 @@ import tkinter as tk
 num1 = int(input("Type first number:\n"))
 num2 = int(input("Type second number:\n"))
 
-
 print(num1 + num2)
