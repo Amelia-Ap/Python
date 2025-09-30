@@ -43,22 +43,25 @@ root.geometry("400x400")
 entry0 = ttk.Entry(root, justify="right")
 entry0.grid(row=0, column=0, columnspan=3, sticky="ew")
 
-# Create Labels
-label1 = ttk.Button(root, text="1", command=entry_insert_1).grid(row=1, column=0, sticky="nsew")
-label2 = ttk.Button(root, text="2", command=entry_insert_2).grid(row=1, column=1, sticky="nsew")
-label3 = ttk.Button(root, text="3", command=entry_insert_3).grid(row=1, column=2, sticky="nsew")
-label4 = ttk.Button(root, text="4", command=entry_insert_4).grid(row=2, column=0, sticky="nsew")
-label5 = ttk.Button(root, text="5", command=entry_insert_5).grid(row=2, column=1, sticky="nsew")
-label6 = ttk.Button(root, text="6", command=entry_insert_6).grid(row=2, column=2, sticky="nsew")
-label7 = ttk.Button(root, text="7", command=entry_insert_7).grid(row=3, column=0, sticky="nsew")
-label8 = ttk.Button(root, text="8", command=entry_insert_8).grid(row=3, column=1, sticky="nsew")
-label9 = ttk.Button(root, text="9", command=entry_insert_9).grid(row=3, column=2, sticky="nsew")
-label10 = ttk.Button(root, text="+", command=entry_insert_plus).grid(row=4, column=0, sticky="nsew")
-label11 = ttk.Button(root, text="-").grid(row=4, column=1, sticky="nsew")
-label12 = ttk.Button(root, text="=", command=print_entry).grid(row=4, column=2, sticky="nsew")
+# Create button
+# s
+button1 = ttk.Button(root, text="1", command=entry_insert_1).grid(row=1, column=0, sticky="nsew")
+button2 = ttk.Button(root, text="2", command=entry_insert_2).grid(row=1, column=1, sticky="nsew")
+button3 = ttk.Button(root, text="3", command=entry_insert_3).grid(row=1, column=2, sticky="nsew")
+button4 = ttk.Button(root, text="4", command=entry_insert_4).grid(row=2, column=0, sticky="nsew")
+button5 = ttk.Button(root, text="5", command=entry_insert_5).grid(row=2, column=1, sticky="nsew")
+button6 = ttk.Button(root, text="6", command=entry_insert_6).grid(row=2, column=2, sticky="nsew")
+button7 = ttk.Button(root, text="7", command=entry_insert_7).grid(row=3, column=0, sticky="nsew")
+button8 = ttk.Button(root, text="8", command=entry_insert_8).grid(row=3, column=1, sticky="nsew")
+button9 = ttk.Button(root, text="9", command=entry_insert_9).grid(row=3, column=2, sticky="nsew")
+button10 = ttk.Button(root, text="+", command=entry_insert_plus).grid(row=4, column=0, sticky="nsew")
+button11 = ttk.Button(root, text="-").grid(row=4, column=1, sticky="nsew")
+button12 = ttk.Button(root, text="=", command=print_entry).grid(row=4, column=2, sticky="nsew")
 # put widget to the left side and
-# with the label at its bottom
-# label3 = ttk.Button(root, text="Hello", width=20).grid(row=0, column=3)
+# with the button
+#  at its bottom
+# button
+# 3 = ttk.Button(root, text="Hello", width=20).grid(row=0, column=3)
 
 # Make the 3 columns fill
 # the whole row equally
@@ -74,3 +77,4 @@ root.grid_rowconfigure(4, weight=1)
 
 root.mainloop()
 
+print(f'{int(hex(255), 16)}')
