@@ -11,10 +11,10 @@ Tupel2=(1,2,3)
 print(Tupel, Tupel2)
 def polygon(k):
     for i in range(k):
-        t.forward(50)
+        t.forward(40)
         t.right(180-180*(k-2)/k)
 
-polygon(5)
+polygon(50)
 turtle.done()
 
 '''
