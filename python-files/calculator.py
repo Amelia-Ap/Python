@@ -1,6 +1,7 @@
 # import tkinter, a GUI library
 import tkinter as tk
 from tkinter import ttk
+from math import sqrt
 
 def entry_insert_1():
     entry0.insert(tk.END, 1)
@@ -22,10 +23,38 @@ def entry_insert_9():
     entry0.insert(tk.END, 9)
 def entry_insert_plus():
     entry0.insert(tk.END, "+")
+def entry_insert_minus():
+    entry0.insert(tk.END, "-")
+def entry_insert_times():
+    entry0.insert(tk.END, "*")
+def entry_insert_divide():
+    entry0.insert(tk.END, "/")
+def entry_insert_modulo():
+    entry0.insert(tk.END, "%")
+def entry_insert_point():
+    entry0.insert(tk.END, ".")
+def entry_insert_power():
+    entry0.insert(tk.END, "**")
+def entry_insert_point():
+    entry0.insert(tk.END, ".")
+
 def print_entry():
+    result = entry0.get()
+    print(f'num of 0s: {entry0.get().count(".")}')
+    if (result.count(".") > 1):
+        print("IP!!\n\n")
+        for num in result.split("."):
+            for k in (bin(int(num)))[2:]:
+                print(k)
     result = eval(str(entry0.get()))
     entry0.delete(0, tk.END)
     entry0.insert(0, result)
+    
+
+for i in [123, 12, 255, 2]:
+    print(f"number: {(bin(i)[2:])}",
+          f"append to 0s: {(8-len(bin(i)[2:]))*"0"+(bin(i)[2:])}",
+          f"number of dots: {len(bin(i)[2:])}")
 
 #Create style
 # style = ttk.Style()
@@ -42,7 +71,7 @@ root.configure(background="lightblue")
 
 
 # set initial windowsize
-root.geometry("600x800+50+50")
+root.geometry("800x1000+50+50")
 
 # Create input field
 entry0 = ttk.Entry(root, justify="right")
@@ -59,8 +88,15 @@ label7 = ttk.Button(root, text="7", command=entry_insert_7).grid(row=3, column=0
 label8 = ttk.Button(root, text="8", command=entry_insert_8).grid(row=3, column=1, padx=3, pady=3, sticky="nsew")
 label9 = ttk.Button(root, text="9", command=entry_insert_9).grid(row=3, column=2, padx=3, pady=3, sticky="nsew")
 label10 = ttk.Button(root, text="+", command=entry_insert_plus).grid(row=4, column=0, padx=3, pady=3, sticky="nsew")
-label11 = ttk.Button(root, text="-", style="Big.TButton").grid(row=4, column=1, padx=3, pady=3, sticky="nsew")
-label12 = ttk.Button(root, text="=", command=print_entry).grid(row=4, column=2, padx=3, pady=3, sticky="nsew")
+label11 = ttk.Button(root, text="-", command=entry_insert_minus).grid(row=4, column=1, padx=3, pady=3, sticky="nsew")
+label12 = ttk.Button(root, text=".", command=entry_insert_point).grid(row=4, column=2, padx=3, pady=3, sticky="nsew")
+label13 = ttk.Button(root, text="*", command=entry_insert_times).grid(row=5, column=0, padx=3, pady=3, sticky="nsew")
+label14 = ttk.Button(root, text="/", command=entry_insert_divide).grid(row=5, column=1, padx=3, pady=3, sticky="nsew")
+label15 = ttk.Button(root, text="%", command=entry_insert_modulo).grid(row=5, column=2, padx=3, pady=3, sticky="nsew")
+label15 = ttk.Button(root, text="^", command=entry_insert_power).grid(row=6, column=0, padx=3, pady=3, sticky="nsew")
+label15 = ttk.Button(root, text="", command=entry_insert_point).grid(row=6, column=1, padx=3, pady=3, sticky="nsew")
+label16 = ttk.Button(root, text="=", command=print_entry).grid(row=6, column=2, padx=3, pady=3, sticky="nsew")
+
 # put widget to the left side and
 # with the label at its bottom
 # label3 = ttk.Button(root, text="Hello", width=20).grid(row=0, column=3)
@@ -76,5 +112,7 @@ root.grid_rowconfigure(1, weight=1)
 root.grid_rowconfigure(2, weight=1)
 root.grid_rowconfigure(3, weight=1)
 root.grid_rowconfigure(4, weight=1)
+root.grid_rowconfigure(5, weight=1)
+root.grid_rowconfigure(6, weight=1)
 
 root.mainloop()
