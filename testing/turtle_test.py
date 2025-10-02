@@ -14,7 +14,7 @@ def polygon(k):
         t.forward(50)
         t.right(180-180*(k-2)/k)
 
-polygon(12)
+polygon(5)
 turtle.done()
 
 '''

@@ -1,0 +1,16 @@
+QPushButton {
+    background-color: #1ee3c2dd;
+    font-size: 80px;
+    
+    /*border-radius: 30px;*/
+    border-radius: 40%;    
+    border: 1px solid grey;
+}
+
+QMainWindow {
+    background: qlineargradient(
+        x1:0, y1:0, x2:1, y2:1,
+        stop:0 rgba(200,20,200,0), stop:1 rgba(200,20,200,1)
+    );
+};
+
