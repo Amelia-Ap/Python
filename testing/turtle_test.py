@@ -4,17 +4,19 @@ for k in range(20,4,-2):
     print(k)
 
 t = turtle.Turtle()
-t.color("green")
+t.color("blue")
 Tupel=(1,2,3)
 Tupel2=(1,2,3)
 
 print(Tupel, Tupel2)
-def polygon(k):
-    for i in range(k):
-        t.forward(40)
-        t.right(180-180*(k-2)/k)
 
-polygon(50)
+# Draw a regular polygon with a specific sidelength and amount of edges and
+def polygon(sidelength, amount_of_edges):
+    for i in range(amount_of_edges):
+        t.forward(sidelength)
+        t.right(180-180*(amount_of_edges-2)/amount_of_edges)
+
+polygon(40, 3)
 turtle.done()
 
 '''

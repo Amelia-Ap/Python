@@ -77,4 +77,3 @@ root.grid_rowconfigure(4, weight=1)
 
 root.mainloop()
 
-print(f'{int(hex(255), 16)}')
