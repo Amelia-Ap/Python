@@ -38,6 +38,7 @@ def entry_insert_power():
 def entry_insert_point():
     entry0.insert(tk.END, ".")
 
+
 def print_entry():
     result = entry0.get()
     print(f'num of 0s: {entry0.get().count(".")}')
