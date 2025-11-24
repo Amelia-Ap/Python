@@ -40,7 +40,6 @@ def entry_insert_point():
 
 def print_entry():
     result = entry0.get()
-    '''
     print(f'num of 0s: {entry0.get().count(".")}')
     if (result.count(".") > 1):
         print("IP!!\n\n")
@@ -51,14 +50,14 @@ def print_entry():
     result = eval(str(entry0.get()))
     entry0.delete(0, tk.END)
     entry0.insert(0, result)
-    '''
 
 
+'''
 for i in [123, 12, 255, 2]:
     print(f"number: {(bin(i)[2:])}",
           f"append to 0s: {(8-len(bin(i)[2:]))*"0"+(bin(i)[2:])}",
           f"number of dots: {len(bin(i)[2:])}")
-
+'''
 #Create style
 # style = ttk.Style()
 # style.configure("Big.TButton", font=("Helvetica", 18))
